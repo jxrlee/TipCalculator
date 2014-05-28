@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipControl;
 @property (weak, nonatomic) IBOutlet UILabel *test;
+@property (weak, nonatomic) IBOutlet UISlider *splitValue;
+@property (weak, nonatomic) IBOutlet UILabel *splitNumber;
 
 - (IBAction)onTap:(id)sender;
 - (void)updateValues;
@@ -23,6 +25,7 @@
 - (IBAction)clearBill:(id)sender;
 - (IBAction)formatBill:(id)sender;
 - (IBAction)unformatBill:(id)sender;
+- (IBAction)sliderChange:(id)sender;
 
 
 @end
@@ -63,14 +66,14 @@
         NSString *btf = [self.billTextField.text substringFromIndex:1];
         
         float billAmount = [btf floatValue];
-        
+        float split = self.splitValue.value;
         
         NSArray *tipValues = @[@(0.1), @(0.15), @(0.2)];
         
-        float tipAmount = billAmount * [tipValues[self.tipControl.selectedSegmentIndex] floatValue];
-        float totalAmount = tipAmount + billAmount;
+        float tipAmount = (billAmount * [tipValues[self.tipControl.selectedSegmentIndex] floatValue])/split;
+        float totalAmount = (tipAmount + billAmount)/split;
         
-        if(billAmount >= 100) {
+        if(totalAmount >= 100) {
             self.tipLabel.text = [NSString stringWithFormat:@"$%0.0f", tipAmount];
             self.totalLabel.text = [NSString stringWithFormat:@"$%0.0f", totalAmount];
         }
@@ -105,11 +108,24 @@
     
 }
 
+- (IBAction)sliderChange:(id)sender {
+    float rounded = lroundf(self.splitValue.value);
+    self.splitValue.value = rounded;
+    if(rounded == 1) {
+        self.splitNumber.text = @"NO SPLIT";
+    }
+    else {
+        self.splitNumber.text =[NSString stringWithFormat:@"%0.0f WAY", rounded];
+    }
+    
+    [self updateValues];
+}
+
 
 - (void)clearBill {
     self.billTextField.text = nil;
-    self.tipLabel.text = nil;
-    self.totalLabel.text = nil;
+    self.tipLabel.text = @"-";
+    self.totalLabel.text = @"-";
 }
 
 - (IBAction)clearBill:(id)sender {
