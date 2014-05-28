@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A9A192A193558C7000EF340 /* TipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9A1928193558C7000EF340 /* TipViewController.m */; };
+		7A9A192B193558C7000EF340 /* TipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A9A1929193558C7000EF340 /* TipViewController.xib */; };
 		7AB262C3193424B500B6F32D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB262C2193424B500B6F32D /* Foundation.framework */; };
 		7AB262C5193424B500B6F32D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB262C4193424B500B6F32D /* CoreGraphics.framework */; };
 		7AB262C7193424B500B6F32D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB262C6193424B500B6F32D /* UIKit.framework */; };
@@ -32,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A9A1927193558C7000EF340 /* TipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipViewController.h; sourceTree = "<group>"; };
+		7A9A1928193558C7000EF340 /* TipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipViewController.m; sourceTree = "<group>"; };
+		7A9A1929193558C7000EF340 /* TipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipViewController.xib; sourceTree = "<group>"; };
 		7AB262BF193424B500B6F32D /* tipcalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tipcalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AB262C2193424B500B6F32D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7AB262C4193424B500B6F32D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,6 +116,9 @@
 				7AB262D2193424B500B6F32D /* JLAppDelegate.m */,
 				7AB262D4193424B500B6F32D /* Images.xcassets */,
 				7AB262C9193424B500B6F32D /* Supporting Files */,
+				7A9A1927193558C7000EF340 /* TipViewController.h */,
+				7A9A1928193558C7000EF340 /* TipViewController.m */,
+				7A9A1929193558C7000EF340 /* TipViewController.xib */,
 			);
 			path = tipcalculator;
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9A192B193558C7000EF340 /* TipViewController.xib in Resources */,
 				7AB262CD193424B500B6F32D /* InfoPlist.strings in Resources */,
 				7AB262D5193424B500B6F32D /* Images.xcassets in Resources */,
 			);
@@ -241,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AB262D3193424B500B6F32D /* JLAppDelegate.m in Sources */,
+				7A9A192A193558C7000EF340 /* TipViewController.m in Sources */,
 				7AB262CF193424B500B6F32D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +371,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tipcalculator/tipcalculator-Prefix.pch";
 				INFOPLIST_FILE = "tipcalculator/tipcalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -374,6 +385,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tipcalculator/tipcalculator-Prefix.pch";
 				INFOPLIST_FILE = "tipcalculator/tipcalculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -438,6 +450,7 @@
 				7AB262ED193424B500B6F32D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7AB262EE193424B500B6F32D /* Build configuration list for PBXNativeTarget "tipcalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +459,7 @@
 				7AB262F0193424B500B6F32D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
