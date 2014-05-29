@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *test;
 @property (weak, nonatomic) IBOutlet UISlider *splitValue;
 @property (weak, nonatomic) IBOutlet UILabel *splitNumber;
+@property (weak, nonatomic) IBOutlet UILabel *inputTooltip;
 
 - (IBAction)onTap:(id)sender;
 - (void)updateValues;
@@ -89,7 +90,22 @@
 
 }
 
+// On entering bill input
+- (IBAction)unformatBill:(id)sender {
+    
+    self.inputTooltip.text = @"Enter your bill amount";
+    
+    if([self.billTextField.text length] > 1 ) {
+        self.billTextField.text = [self.billTextField.text substringFromIndex:1];
+    }
+    
+}
+
+// On exiting bill input
 - (IBAction)formatBill:(id)sender {
+    
+    self.inputTooltip.text = @"";
+    
     if([self.billTextField.text length] < 1 ) {
         self.billTextField.text = nil;
     }
@@ -100,14 +116,7 @@
     }
 }
 
-- (IBAction)unformatBill:(id)sender {
-    
-    if([self.billTextField.text length] > 1 ) {
-        self.billTextField.text = [self.billTextField.text substringFromIndex:1];
-    }
-    
-}
-
+// On slider change
 - (IBAction)sliderChange:(id)sender {
     float rounded = lroundf(self.splitValue.value);
     self.splitValue.value = rounded;
@@ -124,8 +133,8 @@
 
 - (void)clearBill {
     self.billTextField.text = nil;
-    self.tipLabel.text = @"-";
-    self.totalLabel.text = @"-";
+    self.tipLabel.text = @" ";
+    self.totalLabel.text = @" ";
 }
 
 - (IBAction)clearBill:(id)sender {

@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TipViewController">
             <connections>
                 <outlet property="billTextField" destination="APn-EV-kNa" id="2fI-8O-KWW"/>
+                <outlet property="inputTooltip" destination="zu6-1E-e4B" id="dS8-gX-aZt"/>
                 <outlet property="splitNumber" destination="lJK-yH-WX3" id="Fsh-Ta-mG5"/>
                 <outlet property="splitValue" destination="6oF-pU-WxF" id="tmf-CT-Fh2"/>
                 <outlet property="tipControl" destination="a7a-H3-zAY" id="Q5q-av-A33"/>
@@ -69,7 +70,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="a7a-H3-zAY">
-                    <rect key="frame" x="20" y="474" width="280" height="37"/>
+                    <rect key="frame" x="20" y="474" width="280" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <segments>
                         <segment title="10%"/>
@@ -102,6 +103,13 @@
                         <action selector="sliderChange:" destination="-1" eventType="valueChanged" id="uM6-VI-fWz"/>
                     </connections>
                 </slider>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press on $0 to begin!" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu6-1E-e4B">
+                    <rect key="frame" x="20" y="60" width="280" height="65"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" red="0.80604619565217395" green="0.80604619565217395" blue="0.80604619565217395" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
             <gestureRecognizers/>
