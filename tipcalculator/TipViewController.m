@@ -94,7 +94,7 @@
 // On entering bill input
 - (IBAction)unformatBill:(id)sender {
     
-    self.inputTooltip.text = @"Enter your bill amount \n (to the next $)";
+    self.inputTooltip.text = @"Enter your bill amount";
     
     if([self.billTextField.text length] > 1 ) {
         self.billTextField.text = [self.billTextField.text substringFromIndex:1];

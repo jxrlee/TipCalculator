@@ -28,7 +28,7 @@
                     <color key="tintColor" red="0.45153277853260865" green="0.45153277853260865" blue="0.45153277853260865" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="textColor" red="0.34394106657608692" green="0.34394106657608692" blue="0.34394106657608692" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="64"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                     <connections>
                         <action selector="formatBill:" destination="-1" eventType="editingDidEnd" id="PbH-hj-i5u"/>
                         <action selector="unformatBill:" destination="-1" eventType="editingDidBegin" id="9Kk-HM-TlW"/>
