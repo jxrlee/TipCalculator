@@ -71,7 +71,7 @@
         NSArray *tipValues = @[@(0.1), @(0.15), @(0.2)];
         
         float tipAmount = (billAmount * [tipValues[self.tipControl.selectedSegmentIndex] floatValue])/split;
-        float totalAmount = (tipAmount + billAmount)/split;
+        float totalAmount = tipAmount + (billAmount/split);
         
         if(totalAmount >= 100) {
             self.tipLabel.text = [NSString stringWithFormat:@"$%0.0f", tipAmount];
