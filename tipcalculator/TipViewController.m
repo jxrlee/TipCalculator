@@ -47,6 +47,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self clearBill];
+    self.inputTooltip.numberOfLines = 0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,7 +94,7 @@
 // On entering bill input
 - (IBAction)unformatBill:(id)sender {
     
-    self.inputTooltip.text = @"Enter your bill amount";
+    self.inputTooltip.text = @"Enter your bill amount \n (to the next $)";
     
     if([self.billTextField.text length] > 1 ) {
         self.billTextField.text = [self.billTextField.text substringFromIndex:1];
