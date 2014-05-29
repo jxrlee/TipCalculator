@@ -113,7 +113,7 @@
     // otherwise format to $
     else {
         float billAmount = [self.billTextField.text floatValue];
-        self.billTextField.text = [NSString stringWithFormat:@"$%0.0f", billAmount];
+        self.billTextField.text = [NSString stringWithFormat:@"$%0.2f", billAmount];
     }
 }
 
