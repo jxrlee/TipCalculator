@@ -14,3 +14,6 @@ Future Improvements
 - animations/transitions for changing numbers
 
 Screenshots
+(/images/start.png?raw=true "Starting Screen")
+(/images/input.png?raw=true "Inputting Bill Amount")
+(/images/end.png?raw=true "Calculated Tip and Total")
