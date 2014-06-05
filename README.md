@@ -15,5 +15,7 @@ A simple tip calculator. More improvements on the way!
 
 ##Screenshots
 ![starting screen](/images/start.png?raw=true "Starting Screen")
+
 ![inputting bill amount](/images/input.png?raw=true "Inputting Bill Amount")
+
 ![calculated tip and total](/images/end.png?raw=true "Calculated Tip and Total")
