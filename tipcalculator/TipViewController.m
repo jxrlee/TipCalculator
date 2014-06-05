@@ -122,10 +122,10 @@
     float rounded = lroundf(self.splitValue.value);
     self.splitValue.value = rounded;
     if(rounded == 1) {
-        self.splitNumber.text = @"NO SPLIT";
+        self.splitNumber.text = @"1 PERSON";
     }
     else {
-        self.splitNumber.text =[NSString stringWithFormat:@"%0.0f WAY", rounded];
+        self.splitNumber.text =[NSString stringWithFormat:@"%0.0f PEOPLE", rounded];
     }
     
     [self updateValues];
