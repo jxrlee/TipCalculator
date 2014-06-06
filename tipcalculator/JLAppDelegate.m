@@ -8,6 +8,7 @@
 
 #import "JLAppDelegate.h"
 #import "TipViewController.h"
+#import "Flurry.h"
 
 @implementation JLAppDelegate
 
@@ -24,6 +25,13 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+    
+    
+    //note: iOS only allows one crash reporting tool per app; if using another, set to: NO
+    [Flurry setCrashReportingEnabled:YES];
+    
+    // Replace YOUR_API_KEY with the api key in the downloaded package
+    [Flurry startSession:@"CNBSNGN4CRPHRCCGB7RF"];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

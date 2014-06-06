@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A9800C81941492E003CF280 /* libFlurry_5.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9800C71941492E003CF280 /* libFlurry_5.0.0.a */; };
+		7A9800CA194149D7003CF280 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9800C9194149D7003CF280 /* Security.framework */; };
+		7A9800CC194149E7003CF280 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9800CB194149E7003CF280 /* SystemConfiguration.framework */; };
 		7A9A192A193558C7000EF340 /* TipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9A1928193558C7000EF340 /* TipViewController.m */; };
 		7A9A192B193558C7000EF340 /* TipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A9A1929193558C7000EF340 /* TipViewController.xib */; };
 		7AB262C3193424B500B6F32D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB262C2193424B500B6F32D /* Foundation.framework */; };
@@ -36,6 +39,10 @@
 
 /* Begin PBXFileReference section */
 		566671FB2A9244059C1A8F9E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		7A9800C61941492E003CF280 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		7A9800C71941492E003CF280 /* libFlurry_5.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_5.0.0.a; sourceTree = "<group>"; };
+		7A9800C9194149D7003CF280 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7A9800CB194149E7003CF280 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7A9A1927193558C7000EF340 /* TipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipViewController.h; sourceTree = "<group>"; };
 		7A9A1928193558C7000EF340 /* TipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipViewController.m; sourceTree = "<group>"; };
 		7A9A1929193558C7000EF340 /* TipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipViewController.xib; sourceTree = "<group>"; };
@@ -63,9 +70,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9800CC194149E7003CF280 /* SystemConfiguration.framework in Frameworks */,
+				7A9800CA194149D7003CF280 /* Security.framework in Frameworks */,
 				7AB262C5193424B500B6F32D /* CoreGraphics.framework in Frameworks */,
 				7AB262C7193424B500B6F32D /* UIKit.framework in Frameworks */,
 				7AB262C3193424B500B6F32D /* Foundation.framework in Frameworks */,
+				7A9800C81941492E003CF280 /* libFlurry_5.0.0.a in Frameworks */,
 				F1AA7AAD019A4374B7FB4E72 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,9 +93,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A9800C51941492E003CF280 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				7A9800C61941492E003CF280 /* Flurry.h */,
+				7A9800C71941492E003CF280 /* libFlurry_5.0.0.a */,
+			);
+			path = Flurry;
+			sourceTree = "<group>";
+		};
 		7AB262B6193424B500B6F32D = {
 			isa = PBXGroup;
 			children = (
+				7A9800C51941492E003CF280 /* Flurry */,
 				7AB262C8193424B500B6F32D /* tipcalculator */,
 				7AB262E1193424B500B6F32D /* tipcalculatorTests */,
 				7AB262C1193424B500B6F32D /* Frameworks */,
@@ -106,6 +126,8 @@
 		7AB262C1193424B500B6F32D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A9800CB194149E7003CF280 /* SystemConfiguration.framework */,
+				7A9800C9194149D7003CF280 /* Security.framework */,
 				7AB262C2193424B500B6F32D /* Foundation.framework */,
 				7AB262C4193424B500B6F32D /* CoreGraphics.framework */,
 				7AB262C6193424B500B6F32D /* UIKit.framework */,
@@ -414,6 +436,10 @@
 				GCC_PREFIX_HEADER = "tipcalculator/tipcalculator-Prefix.pch";
 				INFOPLIST_FILE = "tipcalculator/tipcalculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flurry",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "D41CC4E8-9248-4924-B934-20A1675ED587";
 				WRAPPER_EXTENSION = app;
@@ -430,6 +456,10 @@
 				GCC_PREFIX_HEADER = "tipcalculator/tipcalculator-Prefix.pch";
 				INFOPLIST_FILE = "tipcalculator/tipcalculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flurry",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "C3A146C8-2EEC-4DF6-AB5C-139BDFBA8BC0";
 				WRAPPER_EXTENSION = app;
